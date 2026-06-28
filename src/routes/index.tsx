@@ -138,7 +138,7 @@ function Hero() {
         <motion.div
           initial={{ opacity: 0, scale: 0.96, y: 20 }}
           animate={{ opacity: 1, scale: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1], delay: 0.1 }}
+          transition={{ duration: 0.8, ease: "easeOut" as const, delay: 0.1 }}
           className="relative"
         >
           <div className="absolute -inset-6 rounded-3xl bg-gradient-brand opacity-20 blur-2xl" aria-hidden />
