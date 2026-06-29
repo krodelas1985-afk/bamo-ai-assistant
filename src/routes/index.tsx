@@ -23,7 +23,7 @@ import {
 } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import logo from "@/assets/baymo-logo.png.asset.json";
+import logo from "@/assets/baymo-logo.png";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -41,9 +41,9 @@ export const Route = createFileRoute("/")({
           "Website, ads, content, follow-up, CRM and appointment setting — done for you. Built for Philippine real estate.",
       },
       { property: "og:type", content: "website" },
-      { property: "og:image", content: logo.url },
+      { property: "og:image", content: logo },
       { name: "twitter:card", content: "summary_large_image" },
-      { name: "twitter:image", content: logo.url },
+      { name: "twitter:image", content: logo },
     ],
   }),
   component: Landing,
@@ -75,7 +75,7 @@ function Nav() {
     <header className="sticky top-0 z-40 border-b border-border/60 bg-background/80 backdrop-blur-md">
       <div className="mx-auto flex h-16 w-full max-w-6xl items-center justify-between px-5 sm:px-8 lg:px-12">
         <a href="#top" className="flex items-center gap-2" aria-label="BayMo home">
-          <img src={logo.url} alt="BayMo" className="h-8 w-auto" />
+          <img src={logo} alt="BayMo" className="h-8 w-auto" />
         </a>
         <nav className="hidden items-center gap-8 text-sm font-medium text-muted-foreground md:flex">
           <a href="#included" className="hover:text-foreground">What's included</a>
@@ -764,7 +764,7 @@ function Footer() {
     <footer className="border-t border-border py-10">
       <div className="mx-auto flex w-full max-w-6xl flex-col items-center justify-between gap-4 px-5 sm:flex-row sm:px-8 lg:px-12">
         <div className="flex items-center gap-2">
-          <img src={logo.url} alt="BayMo" className="h-7 w-auto" />
+          <img src={logo} alt="BayMo" className="h-7 w-auto" />
         </div>
         <p className="flex items-center gap-2 text-xs text-muted-foreground">
           <MessageSquare className="h-3.5 w-3.5" />
