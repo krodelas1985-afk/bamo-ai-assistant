@@ -25,7 +25,8 @@ import {
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import logo from "@/assets/baymo-logo.png.asset.json";
-import heroVideo from "@/assets/powered-by-ai.mp4.asset.json";
+import heroDesktop from "@/assets/hero-desktop.mp4.asset.json";
+import heroMobile from "@/assets/hero-mobile.mp4.asset.json";
 
 function HeroVideo() {
   return (
@@ -36,14 +37,26 @@ function HeroVideo() {
         transition={{ duration: 0.8, ease: "easeOut" as const }}
         className="relative z-10 w-full h-screen"
       >
+        {/* Mobile video — shown only below sm (< 640px) */}
         <video
-          src={heroVideo.url}
+          src={heroMobile.url}
           autoPlay
           muted
           loop
           playsInline
           preload="metadata"
-          className="block h-full w-full object-cover"
+          className="block sm:hidden h-full w-full object-cover"
+          aria-label="Powered by AI, Led by People"
+        />
+        {/* Desktop/tablet video — shown sm and above */}
+        <video
+          src={heroDesktop.url}
+          autoPlay
+          muted
+          loop
+          playsInline
+          preload="metadata"
+          className="hidden sm:block h-full w-full object-cover"
           aria-label="Powered by AI, Led by People"
         />
       </motion.div>
