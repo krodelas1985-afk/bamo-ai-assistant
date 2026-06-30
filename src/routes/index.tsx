@@ -516,23 +516,6 @@ function Replaces() {
 }
 
 function HowItWorks() {
-  const steps = [
-    {
-      n: "01",
-      t: "You onboard",
-      d: "A short setup call. We connect your pages, listings and lead sources.",
-    },
-    {
-      n: "02",
-      t: "BaMo runs your growth 24/7",
-      d: "Website, ads, content, instant replies, follow-up and booking — all handled.",
-    },
-    {
-      n: "03",
-      t: "You step in to close",
-      d: "Walk into warm, pre-qualified appointments that are already booked.",
-    },
-  ];
   return (
     <Section id="how" className="py-20 sm:py-28 bg-[color:var(--tint-mint)] rounded-[2rem]">
       <motion.div
@@ -549,63 +532,18 @@ function HowItWorks() {
           Onboard once. BaMo handles the rest.
         </h2>
       </motion.div>
-      <div className="mt-12 grid gap-5 md:grid-cols-3">
-        {steps.map((s, i) => (
-          <motion.div
-            key={s.n}
-            initial="hidden"
-            whileInView="show"
-            viewport={{ once: true, margin: "-60px" }}
-            variants={fadeUp}
-            transition={{ delay: i * 0.08 }}
-            className="relative overflow-hidden rounded-2xl border border-border bg-card p-7"
-          >
-            <span className="font-display text-6xl font-extrabold text-gradient-brand">
-              {s.n}
-            </span>
-            <h3 className="mt-4 font-display text-xl font-bold">{s.t}</h3>
-            <p className="mt-2 text-sm text-muted-foreground">{s.d}</p>
-          </motion.div>
-        ))}
-      </div>
-
       <motion.div
         initial="hidden"
         whileInView="show"
         viewport={{ once: true, margin: "-60px" }}
         variants={fadeUp}
-        className="mt-14 rounded-2xl border border-border bg-card p-7"
+        className="mt-12"
       >
-        <p className="text-sm font-semibold uppercase tracking-wider text-[color:var(--brand-red)]">
-          Why BaMo is different
-        </p>
-        <h3 className="mt-3 font-display text-2xl font-extrabold">
-          Most platforms stop after generating a lead. BaMo doesn't.
-        </h3>
-        <ol className="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-          {[
-            "Generate the lead",
-            "Respond instantly, 24/7",
-            "Qualify the buyer",
-            "Follow up automatically",
-            "Book the appointment",
-            "Track everything in your CRM",
-          ].map((s, i) => (
-            <li
-              key={s}
-              className="flex items-center gap-3 rounded-xl bg-secondary/60 px-4 py-3 text-sm font-medium"
-            >
-              <span className="flex h-7 w-7 flex-shrink-0 items-center justify-center rounded-full bg-gradient-brand text-xs font-bold text-white">
-                {i + 1}
-              </span>
-              {s}
-            </li>
-          ))}
-        </ol>
-        <p className="mt-5 text-sm text-muted-foreground">
-          You simply <span className="font-semibold text-foreground">show the property and
-          close the deal.</span>
-        </p>
+        <img
+          src="/images/how-it-works.png"
+          alt="How BaMo works"
+          className="w-full h-auto rounded-2xl object-contain"
+        />
       </motion.div>
     </Section>
   );
