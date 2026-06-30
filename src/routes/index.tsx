@@ -10,6 +10,7 @@ import {
   ShieldCheck,
   ArrowRight,
   Zap,
+  Store,
   Globe,
   Megaphone,
   Video,
@@ -278,6 +279,12 @@ function Problem() {
 
 function Included() {
   const items = [
+    {
+      icon: Store,
+      eyebrow: "Listed on BaMo",
+      t: "BaMo Marketplace Listing",
+      d: "Your properties live on bahaymo.com — a dedicated Philippine real estate marketplace where buyers are already searching.",
+    },
     {
       icon: Globe,
       eyebrow: "Get found",
